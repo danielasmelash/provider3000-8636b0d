@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "provider3000"
+  description: "provider3000"
+  links:
+    - url: https://api-provider3000-pacticipants-dev.empcbr.thoughtworks-labs.net/swagger
+      title: provider3000
+      icon: dashboard
+  annotations:
+    circleci.com/project-slug: github/platform-dx/provider3000-8636b0d
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug:  platform-dx/provider3000-8636b0d
+    sonarqube.org/project-key: "provider3000"
+    backstage.io/kubernetes-label-selector: "app=provider3000"
+    backstage.io/adr-location: docs/adrs/
+    pactbroker/consumer-provider: "GettingStartedOrderWeb-GettingStartedOrderApi"
+
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "demodx"
+  providesApis:
+    - "provider3000"
